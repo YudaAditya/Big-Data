@@ -1,0 +1,41 @@
+pertemuan 15
+pick 1 project pribadi 
+
+pertemuan 9
+tanggal 4 nov 2019
+
+velocity
+volume 
+variety
+value
+
+ujian dengan google form
+bisa essay dan choice
+
+skema atau gambar flow nya untuk TA atau Skripsi
+
+traversal graph
+
+breadth first-search traversal DFS = QUEUE
+Depth first-search traversal BFS = STACK
+
+
+pertanyaan jangan lupa setiap pertemuan
+tweepy api python
+twint api python
+
+
+LAB
+1.tentukan topic yg ingin di crawl di twitter per individu, boleh 1 atau 2, kurang dari 
+    contoh tentang query jokowi menang, free palestine, dilarang SARA
+    crawl sebanyak mungkin
+    disarankan pakai twint untuk project lab ini
+
+simpan
+belajar menggunakan anaconda
+simpan time
+location
+user
+tweets
+
+2. cleaning pakai pandas

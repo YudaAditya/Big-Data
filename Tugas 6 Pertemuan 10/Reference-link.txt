@@ -1,0 +1,13 @@
+Pandas Column Modification
+
+https://www.geeksforgeeks.org/python-pandas-series-str-replace-to-replace-text-in-a-series/
+https://www.geeksforgeeks.org/python-pandas-split-strings-into-two-list-columns-using-str-split/
+https://www.geeksforgeeks.org/dealing-with-rows-and-columns-in-pandas-dataframe/
+https://stackoverflow.com/questions/42462530/how-to-replace-the-white-space-in-a-string-in-a-pandas-dataframe
+https://www.kdnuggets.com/2019/06/select-rows-columns-pandas.html
+https://www.geeksforgeeks.org/selecting-rows-in-pandas-dataframe-based-on-conditions/
+
+Plotly
+https://plot.ly/python/v3/ipython-notebooks/cufflinks/
+chart studio Plotly
+https://plot.ly/python/v4-migration/
