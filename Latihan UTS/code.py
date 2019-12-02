@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('data.txt', sep=",", header=None,
                    names=["url", "akronim", "skor"])
 # data = re.sub("[][]","",str(data))
-kamus={}
-# datas={}
-values=1
+kamus = []
+datas = {}
+values = 1
 # data['url'] =  [re.sub(r"[[]]",'', str(x)) for x in data['url']]
 # url = data['url'].unique()
 # akronim = data['akronim'].unique()
@@ -20,17 +20,19 @@ data1 = data.loc[data['skor'] > 0.9]
 # data1 = data1.sort_values('skor',inplace=True)
 url = data1['url'].unique()
 akronim = data1['akronim'].unique()
-
+new = data1["akronim"].str.split("=>", n=1, expand=True)
+data1['akro']=new[0]
+data1['etendakro']=new[1]
 # group =data1.groupby('akronim')['url'].groups
 # print(group)
 
 # for x in group:
 #     print(x)
 df1 = data1['akronim']+" , "+str(data1['skor'])+" , "+data1['url']
-print(df1)
-    # cari = data1.loc[data1['url'].isin(x)]
-    # count=+1
-    # print(count)
+# print(df1)
+# cari = data1.loc[data1['url'].isin(x)]
+# count=+1
+# print(count)
 
 # print(data1[cari])
 # cari = data1.loc[data1['url'].isin(url)]
@@ -43,8 +45,10 @@ print(df1)
 
 # print(url,akronim)
 
-# for x in url:
-#     kamus=x
+for x in url:
+    kamus.append(x)
+# print(kamus)
+
 #     print(kamus)df1= data1[data1['url'].notnull() & (data1['akronim'])]
 # print(data1)
 df1 = data1[:20]  # nampilin berapa yang mo ditampilin
@@ -56,10 +60,16 @@ def clean_data(text):
     text = re.sub("[][]", "", text)
     return text
 
-# for line in data.split(", "):
-#     # kamus=line
+
+for line in kamus:
+    if line not in datas:
+        datas[line] = values
+    elif line in datas:
+        datas[line] = values+1
 #     kamus=clean_data(line)
-#     # print(kamus)
+# print(datas)
+group = data1.groupby('akronim','skor')['url'].apply('::'.join).reset_index()
+print(group)
 #     # kamus=re.findall("\s\d.+",line)
 #     for term in kamus.split("\n ") :
 #         datas['url']=term
@@ -69,7 +79,7 @@ def clean_data(text):
 #     #     data['skor']=skor
 #         print(datas)
 
-    # print(datas)
-    # print(kamus)
+# print(datas)
+# print(kamus)
 
 # print(data)
