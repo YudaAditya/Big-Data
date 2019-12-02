@@ -1,2 +1,2 @@
-*.json
-find . -size +100M | cat >> .gitignore
+# Ignore Folder Hadoop
+hadoop/
