@@ -47,9 +47,9 @@ print(df1)
 #     kamus=x
 #     print(kamus)df1= data1[data1['url'].notnull() & (data1['akronim'])]
 # print(data1)
-# df1 = data1[:20]  # nampilin berapa yang mo ditampilin
-# grafik = df1.plot('akronim', ['skor'], kind='bar')
-# plt.show(grafik)
+df1 = data1[:20]  # nampilin berapa yang mo ditampilin
+grafik = df1.plot('akronim', ['skor'], kind='bar')
+plt.show(grafik)
 
 
 def clean_data(text):
