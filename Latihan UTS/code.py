@@ -64,11 +64,14 @@ def clean_data(text):
 for line in kamus:
     if line not in datas:
         datas[line] = values
+        print(datas[line])
     elif line in datas:
         datas[line] = values+1
+        print(datas[line])
+
 #     kamus=clean_data(line)
 # print(datas)
-group = data1.groupby('akronim','skor')['url'].apply('::'.join).reset_index()
+group = data.groupby('akronim','skor')['url'].apply('::'.join).reset_index()
 print(group)
 #     # kamus=re.findall("\s\d.+",line)
 #     for term in kamus.split("\n ") :

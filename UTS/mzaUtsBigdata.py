@@ -108,7 +108,7 @@ def writeData(dstFileSave):
 def main():
         global program
         global data
-        counter=1
+        counte5r=1
         # for get cmd with -flag
         for cmd in sys.argv[1:]:
             if(cmd[:1]=='-' and counter+1<len(sys.argv)):
